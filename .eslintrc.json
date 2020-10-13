@@ -18,6 +18,7 @@
     },
     "plugins": [
         "react",
+        "jest",
         "@typescript-eslint"
     ],
     "rules": {}
