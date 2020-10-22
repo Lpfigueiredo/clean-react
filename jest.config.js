@@ -7,6 +7,6 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   transform: {
-    '.+\\.ts$': 'ts-jest'
+    '.+\\.(ts|tsx)$': 'ts-jest'
   }
 }
