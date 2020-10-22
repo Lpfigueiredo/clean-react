@@ -2,6 +2,7 @@
   "name": "clean-react",
   "version": "1.0.0",
   "description": "Sistema em ReactJs usando Hooks, Typescript, TDD, Clean Architecture, Design Patterns e SOLID principles",
+  "main": "src/main/index.tsx",
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
