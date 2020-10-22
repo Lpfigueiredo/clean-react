@@ -1,7 +1,6 @@
 node_modules
 .vscode
 coverage
-jest.config.js
 public
-webpack.config.js
+*.config.js
 *.scss
