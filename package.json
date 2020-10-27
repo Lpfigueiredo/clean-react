@@ -4,7 +4,7 @@
   "description": "Sistema em ReactJs usando Hooks, Typescript, TDD, Clean Architecture, Design Patterns e SOLID principles",
   "main": "src/main/index.tsx",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack serve",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
@@ -14,7 +14,10 @@
     "type": "git",
     "url": "https://github.com/Lpfigueiredo/clean-react.git"
   },
-  "keywords": ["react", "webpack"],
+  "keywords": [
+    "react",
+    "webpack"
+  ],
   "author": "Leonardo Paulo Figueiredo",
   "license": "MIT",
   "devDependencies": {
