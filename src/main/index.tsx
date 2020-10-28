@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-use-before-define
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Login from '../presentation/pages/login/login'
+import { Login } from '../presentation/pages'
 
 ReactDOM.render(
   <Login />,
