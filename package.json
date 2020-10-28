@@ -21,6 +21,7 @@
   "author": "Leonardo Paulo Figueiredo",
   "license": "MIT",
   "devDependencies": {
+    "@testing-library/react": "^11.1.0",
     "@types/axios": "^0.14.0",
     "@types/faker": "^5.1.2",
     "@types/jest": "^26.0.14",
