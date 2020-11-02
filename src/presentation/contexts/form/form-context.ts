@@ -1,3 +1,16 @@
-import { createContext } from 'react'
+import { createContext, Dispatch, SetStateAction } from 'react'
 
-export default createContext({ isLoading: false, errorMessage: '', emailError: 'Campo obrigatório', passwordError: 'Campo obrigatório' })
+interface State {
+  isLoading: boolean
+  email: string
+  errorMessage: string
+  emailError: string
+  passwordError: string
+}
+
+interface ContextProps {
+  state: State
+  setState: Dispatch<SetStateAction<State>>
+}
+
+export default createContext({} as ContextProps)

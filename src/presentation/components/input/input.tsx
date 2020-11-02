@@ -6,14 +6,14 @@ import Context from './../../contexts/form/form-context'
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 const Input: React.FC<Props> = (props: Props) => {
-  const value = useContext(Context)
+  const { state, setState } = useContext(Context)
   let error: string
   switch (props.name) {
     case 'password':
-      error = value.passwordError
+      error = state.passwordError
       break
     case 'email':
-      error = value.emailError
+      error = state.emailError
       break
     default:
       error = ''
@@ -28,10 +28,16 @@ const Input: React.FC<Props> = (props: Props) => {
   const enableInput = (event: React.FocusEvent<HTMLInputElement>): void => {
     event.target.readOnly = false
   }
+  const handleChange = (event: React.FocusEvent<HTMLInputElement>): void => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value
+    })
+  }
 
   return (
     <div className={Styles.inputWrap}>
-      <input {...props} readOnly onFocus={enableInput} />
+      <input {...props} data-testid={props.name} readOnly onFocus={enableInput} onChange={handleChange} />
       <span data-testid={`${props.name as string}-status`} title={getTitle()} className={Styles.status}>{getStatus()}</span>
     </div>
   )
