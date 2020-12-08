@@ -15,9 +15,6 @@ const Input: React.FC<Props> = (props: Props) => {
     case 'email':
       error = state.emailError
       break
-    default:
-      error = ''
-      break
   }
   const getStatus = (): string => {
     return error ? '🔴' : '💚'
