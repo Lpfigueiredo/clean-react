@@ -6,8 +6,7 @@ export class RequiredFieldValidation implements FieldValidation {
     this.field = field
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   validate (value: string): null | Error {
-    return new RequiredFieldError()
+    return value ? null : new RequiredFieldError()
   }
 }
