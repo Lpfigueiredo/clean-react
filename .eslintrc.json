@@ -1,7 +1,9 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -9,6 +11,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "eslint:recommended",
+        "plugin:prettier/recommended",
         "standard"
     ],
     "parser": "@typescript-eslint/parser",
@@ -23,12 +26,18 @@
     "plugins": [
         "react",
         "jest",
-        "@typescript-eslint"
+        "import",
+        "prettier",
+        "@typescript-eslint",
+        "simple-import-sort"
     ],
     "settings": {
         "react": {
             "version": "detect"
         }
     },
-    "rules": {}
+    "rules": {
+      "space-before-function-paren": 0,
+      "prettier/prettier": "error"
+    }
 }

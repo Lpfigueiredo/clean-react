@@ -2,7 +2,8 @@ import { InvalidFieldError } from '../../errors'
 import { EmailValidation } from './email-validation'
 import faker from 'faker'
 
-const makeSut = (): EmailValidation => new EmailValidation(faker.database.column())
+const makeSut = (): EmailValidation =>
+  new EmailValidation(faker.database.column())
 
 describe('EmailValidation', () => {
   test('Should return error if email is invalid', () => {

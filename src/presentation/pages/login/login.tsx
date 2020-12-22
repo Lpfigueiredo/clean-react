@@ -31,7 +31,9 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
     })
   }, [state.email, state.password])
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     try {
       event.preventDefault()
       if (state.isLoading || state.emailError || state.passwordError) {
@@ -57,12 +59,29 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
     <div className={Styles.login}>
       <LoginHeader />
       <Context.Provider value={{ state, setState }}>
-        <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
+        <form
+          data-testid="form"
+          className={Styles.form}
+          onSubmit={handleSubmit}
+        >
           <h2>Login</h2>
           <Input type="email" name="email" placeholder="Digite seu email" />
-          <Input type="password" name="password" placeholder="Digite sua senha" />
-          <button data-testid="submit" disabled={!!state.emailError || !!state.passwordError} className={Styles.submit} type="submit">Entrar</button>
-          <Link data-testid="signup" to="/signup" className={Styles.link}>Criar conta</Link>
+          <Input
+            type="password"
+            name="password"
+            placeholder="Digite sua senha"
+          />
+          <button
+            data-testid="submit"
+            disabled={!!state.emailError || !!state.passwordError}
+            className={Styles.submit}
+            type="submit"
+          >
+            Entrar
+          </button>
+          <Link data-testid="signup" to="/signup" className={Styles.link}>
+            Criar conta
+          </Link>
           <FormStatus />
         </form>
       </Context.Provider>
