@@ -10,8 +10,8 @@
         "plugin:jest/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "eslint:recommended",
         "plugin:prettier/recommended",
+        "eslint:recommended",
         "standard"
     ],
     "parser": "@typescript-eslint/parser",
@@ -28,8 +28,8 @@
         "jest",
         "import",
         "prettier",
-        "@typescript-eslint",
-        "simple-import-sort"
+        "simple-import-sort",
+        "@typescript-eslint"
     ],
     "settings": {
         "react": {
