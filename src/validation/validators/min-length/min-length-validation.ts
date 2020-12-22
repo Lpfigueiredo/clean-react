@@ -9,6 +9,6 @@ export class MinLengthValidation implements FieldValidation {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   validate(value: string): null | Error {
-    return new InvalidFieldError()
+    return value.length >= this.minLength ? null : new InvalidFieldError()
   }
 }
