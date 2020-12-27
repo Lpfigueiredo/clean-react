@@ -13,7 +13,7 @@ import {
   RenderResult,
   waitFor
 } from '@testing-library/react'
-import Login from './login'
+import { Login } from '../../pages'
 import { ValidationStub, AuthenticationSpy } from '../../test'
 import { InvalidCredentialsError } from '../../../domain/errors'
 
