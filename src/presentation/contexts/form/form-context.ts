@@ -9,7 +9,7 @@ interface State {
   passwordError: string
 }
 
-interface ContextProps {
+export interface ContextProps {
   state: State
   setState: Dispatch<SetStateAction<State>>
 }
