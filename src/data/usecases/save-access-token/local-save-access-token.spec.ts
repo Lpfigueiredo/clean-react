@@ -1,5 +1,5 @@
 import { LocalSaveAccessToken } from './local-save-access-token'
-import { SetStorageSpy } from '../../test/mock-storage'
+import { SetStorageSpy } from '../../test'
 import faker from 'faker'
 
 type SutTypes = {
