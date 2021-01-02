@@ -64,7 +64,8 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Webpack
 * SASS + Animations
 * NPM
-* Travis CI
+* GitHub Actions
+* CircleCI
 * Faker
 * Coveralls
 * Husky
